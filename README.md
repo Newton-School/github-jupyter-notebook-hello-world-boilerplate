@@ -106,6 +106,6 @@ docker stop <container_id>
 
 ## 👨‍💻 Author
 
-[Your Name] - [Your Contact/LinkedIn]
+[Newton School] - [https://github.com/Newton-School/]
 
 Enjoy coding! 🚀
