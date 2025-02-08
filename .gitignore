@@ -1,0 +1,73 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.dll
+*.dylib
+*.pyd
+
+# Virtual environment directories
+venv/
+env/
+*.venv
+*.env
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Local config files
+*.log
+*.out
+*.err
+*.swp
+*.swo
+*.swn
+
+# Environment Variables
+.env
+.envrc
+*.secret
+
+# Data files (optional, if you don't want to track dataset changes)
+*.csv
+*.tsv
+*.json
+*.xlsx
+*.parquet
+*.h5
+*.db
+*.sqlite
+*.sqlite3
+*.feather
+
+# Docker-related files
+*.pid
+*.sock
+docker-compose.override.yml
+docker-compose.override.yaml
+
+# Jupyter Notebook Kernel / Output Cache
+.ipynb_checkpoints/
+.jupyter/
+*.nbconvert.ipynb
+
+# VS Code settings
+.vscode/
+*.code-workspace
+
+# Mac system files
+.DS_Store
+
+# Python Packaging
+dist/
+build/
+*.egg-info/
+
+# PyTest and Coverage Reports
+.coverage
+htmlcov/
+.cache/
+pytest_cache/
+
+# Ignore generated Markdown files from Jupyter
+*.md
