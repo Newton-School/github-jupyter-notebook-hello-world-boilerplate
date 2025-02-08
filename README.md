@@ -8,26 +8,42 @@ This repository contains a Jupyter Notebook (`index.ipynb`) that runs inside a D
 
 ### **1️⃣ Build the Docker Image**
 
-Run the following command to build the Docker image:
+#### 🔹 For Apple Silicon (M1/M2/M3)
+
+If you are using a **Mac with Apple Silicon**, build the Docker image with:
 
 ```sh
 docker build --platform linux/arm64 -t jupyter-notebook .
+```
+
+#### 🔹 For Intel/AMD (x86_64)
+
+If you are using a **non-Apple Silicon (Intel/AMD) machine**, build the Docker image with:
+
+```sh
+docker build --platform linux/amd64 -t jupyter-notebook .
 ```
 
 ---
 
 ### **2️⃣ Run the Jupyter Notebook**
 
-Start the container and expose it on port `8888`:
+#### 🔹 For Apple Silicon (M1/M2/M3)
 
 ```sh
 docker run --platform linux/arm64 -p 8888:8888 -v $(pwd):/app jupyter-notebook
 ```
 
+#### 🔹 For Intel/AMD (x86_64)
+
+```sh
+docker run --platform linux/amd64 -p 8888:8888 -v $(pwd):/app jupyter-notebook
+```
+
 - This command:
   - Maps your local directory (`$(pwd)`) to `/app` in the container.
   - Exposes Jupyter Notebook on port `8888`.
-  - Ensures compatibility with **Apple Silicon (M1/M2/M3 chips)** by setting the platform to `linux/arm64`.
+  - Ensures the correct platform (`arm64` for Apple Silicon, `amd64` for others).
 
 ---
 
@@ -100,7 +116,7 @@ docker stop <container_id>
 
 - The `.gitignore` file excludes Jupyter checkpoints, virtual environments, and system files.
 - Ensure `Docker` is installed before running the commands.
-- This setup is optimized for Apple M1/M2/M3 chips but works on other platforms too.
+- Follow the correct platform instructions (`arm64` for Apple Silicon, `amd64` for others).
 
 ---
 
