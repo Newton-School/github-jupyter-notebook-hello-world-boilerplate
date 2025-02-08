@@ -1,5 +1,5 @@
 # Use an official Jupyter Notebook base image
-FROM jupyter/scipy-notebook:latest
+FROM jupyter/base-notebook:notebook-6.2.0
 
 # Set the working directory in the container
 WORKDIR /app
